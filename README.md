@@ -1,4 +1,4 @@
-# how to run 
+# How to run 
 script to copy incremental files 
 
 PS C:\Users\Desktop> C:\Users\Desktop\incremental_copy.ps1 E:\Unix_tower E:\Unix_tower1 2
