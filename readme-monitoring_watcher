@@ -1,0 +1,29 @@
+At work we use Powershell to monitor folders.
+It can be used since Windows Vista (.NET and PowerShell is preinstalled) without any additional tools.
+
+This script monitors a certain folder and writes a logfile. You can replace the action and do whatever you want e.g call an external tool
+
+Example log file
+11/23/2014 19:22:04, Created, D:\source\New Text Document.txt
+11/23/2014 19:22:09, Changed, D:\source\New Text Document.txt
+11/23/2014 19:22:09, Changed, D:\source\New Text Document.txt
+11/23/2014 19:22:14, Deleted, D:\source\New Text Document.txt
+   
+    
+    
+    
+How to use
+Create a new text file
+Copy & paste the above code
+Change the following settings to your own needs:
+folder to monitor: $watcher.Path = "D:\source"
+file filter to include only certain file types: $watcher.Filter = "*.*"
+include subdirectories yes/no: $watcher.IncludeSubdirectories = $true
+Save and rename it to StartMonitoring.ps1
+Start monitoring by Right click » Execute with PowerShell
+To stop monitoring, it's enough to close your PowerShell window
+
+Further reading
+Documentation for PowerShell's FileSystemWatcher
+Documentation for PowerShell's Register-Event
+Inspirations for script
